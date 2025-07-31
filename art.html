@@ -1,0 +1,122 @@
+<!-- ======================= art.html ======================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art | Rafael Arias González</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleNav(){ document.getElementById('mobile-menu').classList.toggle('hidden'); }
+  </script>
+  <style>
+    #bg-canvas{ position:absolute; inset:0; width:100%; height:100%; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg fixed top-0 w-full z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-2xl font-bold text-indigo-600">RA</a>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html"   class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-600">Home</a>
+            <a href="games.html"   class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-600">Games</a>
+            <a href="teaching.html"class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-600">Teaching</a>
+            <a href="art.html"     class="px-3 py-2 rounded-md text-sm font-medium text-indigo-600 font-bold">Art</a>
+            <a href="cv.html"       class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-600" target="_blank">CV</a>
+            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700">Contact</a>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button onclick="toggleNav()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"><svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+        <a href="index.html"   class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600">Home</a>
+        <a href="games.html"   class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600">Games</a>
+        <a href="teaching.html"class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600">Teaching</a>
+        <a href="art.html"     class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 font-bold">Art</a>
+        <a href="cv.html"       class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-600" target="_blank">CV</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium bg-indigo-600 text-white hover:bg-indigo-700">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero with Constellations -->
+  <header class="relative pt-24 pb-32 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 overflow-hidden text-center text-white">
+    <canvas id="bg-canvas"></canvas>
+    <div class="relative z-10 max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Artistic Works</h1>
+      <p class="mt-3 text-lg md:text-xl text-indigo-100">Multimedia Pieces</p>
+    </div>
+  </header>
+
+  <!-- Art cards -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="/data/art_goghbot.png" alt="GoghBot" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-2">Gogh Bot (2024)</h2>
+          <p class="text-gray-600 mb-4">Interactive chatbot containing Van Gogh's memories extracted from letters & biographies.</p>
+          <a href="https://arxiv.org/pdf/2404.10890" class="text-indigo-600 font-medium hover:underline">Read paper</a>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="/data/art_mirai.png" alt="Mirai Nami" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-2">Mirai Nami (2021)</h2>
+          <p class="text-gray-600 mb-4">Overthinker music project exploring AI‑generated vocals.</p>
+          <a href="https://www.youtube.com/watch?v=CtXebfb1j0g" class="text-indigo-600 font-medium hover:underline">Listen</a>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="/data/art_paradise.png" alt="Paradise of Strangeness" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-2">Paradise of Strangeness (2018)</h2>
+          <p class="text-gray-600 mb-4">Mr Girl's third album blending synth‑wave with narrative lyrics.</p>
+          <a href="https://open.spotify.com/artist/7xRVgztJWlpzG0bT4ycgyB" class="text-indigo-600 font-medium hover:underline">Listen</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-10"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><p>&copy; <span id="year"></span> Rafael Arias González. All rights reserved.</p></div></footer>
+
+  <!-- Constellation script -->
+  <script>
+    document.querySelector('#year').textContent = new Date().getFullYear();
+
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    const header = canvas.parentElement;
+    const POINTS = 50, SPEED = 0.4, DIST = 110;
+    const dots = [], mouse = {x:0,y:0,active:false};
+
+    function resize(){ canvas.width = header.clientWidth; canvas.height = header.clientHeight; }
+    window.addEventListener('resize', resize); resize();
+
+    for(let i=0;i<POINTS;i++) dots.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-0.5)*SPEED, vy:(Math.random()-0.5)*SPEED});
+
+    canvas.addEventListener('mousemove', e=>{ const r=canvas.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; mouse.active=true; });
+    canvas.addEventListener('mouseleave',()=>mouse.active=false);
+
+    function step(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      for(const p of dots){p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>canvas.width) p.vx*=-1; if(p.y<0||p.y>canvas.height) p.vy*=-1; ctx.beginPath(); ctx.arc(p.x,p.y,2,0,Math.PI*2); ctx.fillStyle='#ffffffaa'; ctx.fill();}
+      for(let i=0;i<POINTS;i++) for(let j=i+1;j<POINTS;j++){ const dx=dots[i].x-dots[j].x, dy=dots[i].y-dots[j].y, d=Math.hypot(dx,dy); if(d<DIST){ ctx.beginPath(); ctx.moveTo(dots[i].x,dots[i].y); ctx.lineTo(dots[j].x,dots[j].y); ctx.strokeStyle=`rgba(255,255,255,${1-d/DIST})`; ctx.lineWidth=1; ctx.stroke(); } }
+      if(mouse.active){ for(const p of dots){ const dx=mouse.x-p.x, dy=mouse.y-p.y, d=Math.hypot(dx,dy); if(d<DIST){ ctx.beginPath(); ctx.moveTo(mouse.x,mouse.y); ctx.lineTo(p.x,p.y); ctx.strokeStyle=`rgba(255,255,255,${1-d/DIST})`; ctx.lineWidth=1.5; ctx.stroke(); } } }
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  </script>
+</body>
+</html>
